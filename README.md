@@ -21,8 +21,6 @@ No substrate, no ellekit — pure ObjC runtime hooking injected into SpringBoard
 ![](media/IMG_2838.PNG)
 ![](media/IMG_2839.PNG)
 
-https://github.com/user-attachments/assets/RPReplay_Final1773821090.MP4
-
 ---
 
 ## Features
