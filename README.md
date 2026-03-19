@@ -102,12 +102,17 @@ iOS 13.0 – 17.2.1 | arm64
 
 Based on and inspired by:
 
-- [zeroxjf/Coruna-Tweaks-Collection](https://github.com/zeroxjf/Coruna-Tweaks-Collection) — **zeroxjf**
-- **FloatingDockXVI** — @EthanWhited
-- **Cylinder Remade** — @ryannair05
-- **FiveIconDock** — lunaynx
+- https://github.com/zeroxjf/Coruna-Tweaks-Collection — **zeroxjf**
+- **FloatingDockXVI** — @EthanWhited  
+- **Cylinder Remade** — @ryannair05  
+- **FiveIconDock** — lunaynx  
 
-Thanks to all original tweak authors. This project would not exist without their work.
+### MobileGestalt Tweaks
+- https://github.com/leminlimez — **Nuget**
+- https://github.com/khanhduytran0 — **SparseBox**
+
+### Additional
+- **Claude** — collaboration & assistance
 
 ---
 
