@@ -1,0 +1,42 @@
+name: Build TweaksLoader dylib
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - feature/dock-spacing
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-15
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Install Theos and dependencies
+        run: |
+          export THEOS="$HOME/theos"
+          bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
+          test -x "$THEOS/bin/nic.pl"
+
+      - name: Build dylib
+        env:
+          THEOS: ${{ runner.temp }}/../theos
+        run: |
+          export THEOS="$HOME/theos"
+          make clean
+          make
+          test -f .theos/obj/debug/TweaksLoader.dylib
+
+      - name: Upload device dylib
+        uses: actions/upload-artifact@v4
+        with:
+          name: TweaksLoader-${{ github.sha }}
+          path: .theos/obj/debug/TweaksLoader.dylib
+          if-no-files-found: error
+          retention-days: 14
